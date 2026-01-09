@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task4</title>
+ 
+    <style>
+        table, th, td {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #000;
+            padding: 10px;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+ 
+    <script>
+        function showText() {
+            let file = document.getElementById("fileUpload").value;
+            let message = document.getElementById("message");
+ 
+            if (file.endsWith(".xlsx") || file.endsWith(".xlsb ") || file.endsWith(".xlsm") || file.endsWith(".xls")) {
+                message.innerHTML =
+                    "File is Excel <br>File type = " + file.split('.').pop();
+            } else {
+                message.innerHTML = "File is Not Excel";
+            }
+        }
+    </script>
+</head>
+<body>
+ 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload & Download File</title>
+ 
+  <style>
+    .container {
+      border: 1px solid black;
+      padding: 10px;
+    }
+    table, th, td {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #000;
+            padding: 10px;
+        }
+        h1 {
+            text-align: center;
+        }
+  </style>
+</head>
+ 
+<body>
+ 
+
+<script>
+     function showText() {
+            let file = document.getElementById("fileUpload").value;
+            let message = document.getElementById("message");
+ 
+            if (file.endsWith(".xlsx") || file.endsWith(".xlsb ") || file.endsWith(".xlsm") || file.endsWith(".xls")) {
+                message.innerHTML =
+                    "File is Excel <br>File type = " + file.split('.').pop();
+            } else {
+                message.innerHTML = "File is Not Excel";
+            }
+        }
+function download() {
+ 
+    var input = document.getElementById("file");
+ 
+    if (input.files.length == 0) {
+        alert("Please select a file");
+        return;
+    }
+ 
+    var file = input.files[0];
+ 
+    var link = document.createElement("a");
+    link.href = URL.createObjectURL(file);
+    link.download = file.name;
+ 
+    link.click();
+}
+
+</script>
+<br>
+ <table>
+    <tr>
+        <th><h1>Allow Only if Excel</h1></th>
+    </tr>
+ 
+    <tr>
+        <td>
+            <h3>Select Excel:</h3>
+ 
+            <input type="file" id="fileUpload" ><br><br>
+ 
+            <input type="button" value="Upload" onclick="showText()">
+ 
+            <p id="message"></p>
+
+        </td>
+    </tr>
+</table>
+
+<h2>Upload and Download File</h2>
+ 
+<div class="container">
+    <input type="file" id="file">
+    <br><br>
+    <button onclick="download()">Download File</button>
+</div>
+ 
+
+</body>
+</html>
+ 
+ 
+</body>
+</html>
