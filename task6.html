@@ -1,37 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task4</title>
- 
-    <style>
-        table, th, td {
-            border-collapse: collapse;
-            width: 100%;
-            border: 1px solid #000;
-            padding: 10px;
-        }
-        h1 {
-            text-align: center;
-        }
-    </style>
- 
-    <script>
-        function showText() {
-            let file = document.getElementById("fileUpload").value;
-            let message = document.getElementById("message");
- 
-            if (file.endsWith(".xlsx") || file.endsWith(".xlsb ") || file.endsWith(".xlsm") || file.endsWith(".xls")) {
-                message.innerHTML =
-                    "File is Excel <br>File type = " + file.split('.').pop();
-            } else {
-                message.innerHTML = "File is Not Excel";
-            }
-        }
-    </script>
-</head>
-<body>
+
  
 <!DOCTYPE html>
 <html>
